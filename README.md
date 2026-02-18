@@ -7,7 +7,7 @@ This implementation is built from scratch (no vendor I²C IP) and validated on F
 ---
 # 🧠 System Block Diagram
 
-![Block Diagram](Images/block_diagram.png)
+![Block Diagram](BlockDiagram.png)
 ## Overview
 
 This project implements a parameterized I²C master controller capable of:
