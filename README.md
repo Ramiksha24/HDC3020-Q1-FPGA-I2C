@@ -82,6 +82,10 @@ This ensures proper setup/hold timing and edge-aligned sampling.
 ### Measured Output (Hardware Capture)
 
 - Temperature ≈ 50 °C  
-- Humidity ≈ 10.1 %RH  
+- Humidity ≈ 10.1 %RH
+
+ ### 📷 Hardware Output Capture
+
+![Hardware Output](output.jpeg)
 
 
