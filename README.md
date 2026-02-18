@@ -84,9 +84,4 @@ This ensures proper setup/hold timing and edge-aligned sampling.
 - Temperature ≈ 50 °C  
 - Humidity ≈ 10.1 %RH  
 
-### Conversion Formulas (Datasheet)
 
-CRC bytes from the sensor were verified against calculated CRC-8 values  
-(Polynomial 0x31, Initial value 0xFF).
-
----
