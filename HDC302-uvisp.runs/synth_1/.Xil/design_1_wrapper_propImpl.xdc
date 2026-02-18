@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:D:/Kaynes/HDC302-uvisp/HDC302-uvisp.srcs/constrs_1/new/constraints.xdc rfile:../../../HDC302-uvisp.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G23 [get_ports clk_0]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G8 [get_ports scl_0]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H8 [get_ports sda_0]

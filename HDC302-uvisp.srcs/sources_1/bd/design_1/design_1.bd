@@ -1,0 +1,230 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5067FB3420F0651",
+      "device": "xczu7cg-ffvc1156-2-i",
+      "gen_directory": "../../../../HDC302-uvisp.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "vio_0": "",
+      "ila_0": "",
+      "hdc302x_i2c_master_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "scl_0": {
+        "direction": "IO"
+      },
+      "sda_0": {
+        "direction": "IO"
+      }
+    },
+    "components": {
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "xci_path": "ip\\design_1_vio_0_0\\design_1_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "6"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip\\design_1_ila_0_0\\design_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "16384"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          }
+        }
+      },
+      "hdc302x_i2c_master_0": {
+        "vlnv": "xilinx.com:module_ref:hdc302x_i2c_master:1.0",
+        "xci_name": "design_1_hdc302x_i2c_master_0_0",
+        "xci_path": "ip\\design_1_hdc302x_i2c_master_0_0\\design_1_hdc302x_i2c_master_0_0.xci",
+        "inst_hier_path": "hdc302x_i2c_master_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hdc302x_i2c_master",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "start": {
+            "direction": "I"
+          },
+          "sda": {
+            "direction": "IO"
+          },
+          "scl": {
+            "direction": "IO"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "done": {
+            "direction": "O"
+          },
+          "ack_error": {
+            "direction": "O"
+          },
+          "temperature_raw": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "humidity_raw": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "state_debug": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "scl_0",
+          "hdc302x_i2c_master_0/scl"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "sda_0",
+          "hdc302x_i2c_master_0/sda"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "vio_0/clk",
+          "ila_0/clk",
+          "hdc302x_i2c_master_0/clk"
+        ]
+      },
+      "hdc302x_i2c_master_0_ack_error": {
+        "ports": [
+          "hdc302x_i2c_master_0/ack_error",
+          "vio_0/probe_in2",
+          "ila_0/probe4"
+        ]
+      },
+      "hdc302x_i2c_master_0_busy": {
+        "ports": [
+          "hdc302x_i2c_master_0/busy",
+          "vio_0/probe_in0",
+          "ila_0/probe0"
+        ]
+      },
+      "hdc302x_i2c_master_0_done": {
+        "ports": [
+          "hdc302x_i2c_master_0/done",
+          "vio_0/probe_in1"
+        ]
+      },
+      "hdc302x_i2c_master_0_humidity_raw": {
+        "ports": [
+          "hdc302x_i2c_master_0/humidity_raw",
+          "vio_0/probe_in4"
+        ]
+      },
+      "hdc302x_i2c_master_0_state_debug": {
+        "ports": [
+          "hdc302x_i2c_master_0/state_debug",
+          "vio_0/probe_in5",
+          "ila_0/probe1"
+        ]
+      },
+      "hdc302x_i2c_master_0_temperature_raw": {
+        "ports": [
+          "hdc302x_i2c_master_0/temperature_raw",
+          "vio_0/probe_in3"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "ila_0/probe2",
+          "hdc302x_i2c_master_0/rst_n"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "ila_0/probe3",
+          "hdc302x_i2c_master_0/start"
+        ]
+      }
+    }
+  }
+}

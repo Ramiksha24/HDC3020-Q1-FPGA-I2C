@@ -1,0 +1,6 @@
+set_property PACKAGE_PIN G23 [get_ports clk_0]
+set_property IOSTANDARD LVCMOS18 [get_ports clk_0]
+set_property PACKAGE_PIN G8 [get_ports scl_0]
+set_property IOSTANDARD LVCMOS33 [get_ports scl_0]
+set_property PACKAGE_PIN H8 [get_ports sda_0]
+set_property IOSTANDARD LVCMOS33 [get_ports sda_0]
